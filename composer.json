@@ -1,0 +1,53 @@
+{
+    "name": "marothyzsolt/laravel-foreign-keys",
+    "description": "Laravel foreign key manager",
+    "keywords": [
+        "marothyzsolt",
+        "laravel",
+        "foreign keys",
+        "laravel-foreign-keys"
+    ],
+    "homepage": "https://github.com/marothyzsolt/laravel-foreign-keys",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Zsolt Marothy",
+            "email": "marothyzsolt@egaming.hu",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarothyZsolt\\LaravelForeignKeys\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MarothyZsolt\\LaravelForeignKeys\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MarothyZsolt\\LaravelForeignKeys\\LaravelForeignKeysServiceProvider"
+            ]
+        }
+    }
+}
