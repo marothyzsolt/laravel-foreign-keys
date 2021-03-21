@@ -28,7 +28,7 @@ class CreateForeignKeys extends Migration {
     {
         $output = new ConsoleOutput();
         $this->keys = config('foreign-keys') ?? [];
-        if (count($this->keys) !== 0) {
+        if (count($this->keys) === 0) {
             return;
         }
 
@@ -73,7 +73,7 @@ class CreateForeignKeys extends Migration {
     public function down(): void
     {
         $this->keys = config('foreign_keys') ?? [];
-        if (count($this->keys) !== 0) {
+        if (count($this->keys) === 0) {
             return;
         }
 
